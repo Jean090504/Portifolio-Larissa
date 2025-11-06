@@ -1,0 +1,155 @@
+/* --- Configurações Gerais (Tema Claro) --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fundo principal (cinza muito claro) */
+    color: #333333; /* Cor de texto principal (escuro) */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    color: #222222; /* Títulos em cinza escuro */
+}
+
+h2 {
+    border-bottom: 2px solid #e0e0e0; /* Linha sutil clara */
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* --- Header e Navegação --- */
+header {
+    background-color: #ffffff; /* Fundo branco */
+    border-bottom: 1px solid #dddddd; /* Borda clara */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fca311; /* Cor destaque (laranja mantido) */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #333333; /* Texto escuro */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background-color: #fca311;
+    color: #ffffff; /* Texto branco no hover */
+    border-radius: 5px;
+}
+
+/* --- Seção Sobre Mim --- */
+#sobre-mim p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #fca311; /* Cor destaque */
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção Sobre o Projeto (Página 2) --- */
+#sobre-projeto p {
+    line-height: 1.7;
+    font-size: 1.05em;
+    text-align: justify;
+}
+
+/* --- Grid do Portfólio (Peças) --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+.peca {
+    background-color: #ffffff; /* Fundo branco para os cards */
+    border: 1px solid #dddddd; /* Borda clara */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.peca:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+.peca img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.peca-info {
+    padding: 20px;
+}
+
+.peca-info h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.peca-info .tema {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #fca311; /* Cor destaque */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.peca-info .descricao {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #666666; /* Cor de descrição (cinza médio) */
+}
+
+/* --- Footer (Rodapé) --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #777777; /* Texto do rodapé (cinza) */
+    font-size: 0.9em;
+    border-top: 1px solid #dddddd;
+}
