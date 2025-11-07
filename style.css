@@ -13,12 +13,15 @@ body {
     font-family: "Bodoni Moda", serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333333; 
+    background-image: url(./img/teste.png);
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    position: relative;
+    color: #262220;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -29,7 +32,7 @@ img {
 }
 
 h1, h2, h3 {
-    color: #222222; 
+    color: #a15c38;
 }
 
 h2 {
@@ -40,7 +43,7 @@ h2 {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #a15c38;
     border-bottom: 1px solid #dddddd; 
     padding: 10px 0;
     text-align: center;
@@ -49,7 +52,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 4.5em;
-    color: #fca311; 
+    color: #f7f1f0;
     font-family: "Fleur De Leah", cursive;
 }
 
@@ -60,7 +63,7 @@ nav {
 }
 
 nav a {
-    color: #333333; 
+    color: #f7f1f0;
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
@@ -68,14 +71,14 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #fca311;
+    background-color: #262220;
     color: #ffffff; 
     border-radius: 5px;
 }
 
 #sobre-mim p {
     line-height: 1.2;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: justify;
 }
 
@@ -84,7 +87,7 @@ nav a:hover {
 }
 
 .social-links a {
-    color: #fca311;
+    color: #a15c38;
     text-decoration: none;
     margin-right: 15px;
     font-weight: bold;
