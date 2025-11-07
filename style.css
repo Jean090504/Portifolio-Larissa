@@ -1,14 +1,20 @@
-/* --- Configurações Gerais (Tema Claro) --- */
-* {
+*{
     box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ol, ul, li{
+    list-style: none;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Bodoni Moda", serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Fundo principal (cinza muito claro) */
-    color: #333333; /* Cor de texto principal (escuro) */
+    background-color: #f8f9fa;
+    color: #333333; 
 }
 
 .container {
@@ -23,51 +29,54 @@ img {
 }
 
 h1, h2, h3 {
-    color: #222222; /* Títulos em cinza escuro */
+    color: #222222; 
 }
 
 h2 {
-    border-bottom: 2px solid #e0e0e0; /* Linha sutil clara */
+    border-bottom: 2px solid #e0e0e0;
     padding-bottom: 10px;
     margin-top: 30px;
+    font-size: 2.5em;
 }
 
-/* --- Header e Navegação --- */
 header {
-    background-color: #ffffff; /* Fundo branco */
-    border-bottom: 1px solid #dddddd; /* Borda clara */
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd; 
     padding: 10px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
-    color: #fca311; /* Cor destaque (laranja mantido) */
+    font-size: 4.5em;
+    color: #fca311; 
+    font-family: "Fleur De Leah", cursive;
 }
 
 nav {
     margin-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
 }
 
 nav a {
-    color: #333333; /* Texto escuro */
+    color: #333333; 
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 nav a:hover {
     background-color: #fca311;
-    color: #ffffff; /* Texto branco no hover */
+    color: #ffffff; 
     border-radius: 5px;
 }
 
-/* --- Seção Sobre Mim --- */
 #sobre-mim p {
-    line-height: 1.6;
-    font-size: 1.1em;
+    line-height: 1.2;
+    font-size: 1.2em;
+    text-align: justify;
 }
 
 .social-links {
@@ -75,7 +84,7 @@ nav a:hover {
 }
 
 .social-links a {
-    color: #fca311; /* Cor destaque */
+    color: #fca311;
     text-decoration: none;
     margin-right: 15px;
     font-weight: bold;
@@ -85,24 +94,21 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- Seção Sobre o Projeto (Página 2) --- */
 #sobre-projeto p {
     line-height: 1.7;
     font-size: 1.05em;
     text-align: justify;
 }
 
-/* --- Grid do Portfólio (Peças) --- */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
     gap: 25px; 
-    margin-top: 20px;
 }
 
 .peca {
-    background-color: #ffffff; /* Fundo branco para os cards */
-    border: 1px solid #dddddd; /* Borda clara */
+    background-color: #ffffff; 
+    border: 1px solid #dddddd; 
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -110,12 +116,12 @@ nav a:hover {
 
 .peca:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .peca img {
     width: 100%;
-    height: 220px;
+    height: 470px;
     object-fit: cover;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -132,7 +138,7 @@ nav a:hover {
 .peca-info .tema {
     font-style: italic;
     font-size: 0.9em;
-    color: #fca311; /* Cor destaque */
+    color: #fca311; 
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -140,16 +146,93 @@ nav a:hover {
 .peca-info .descricao {
     font-size: 0.95em;
     line-height: 1.5;
-    color: #666666; /* Cor de descrição (cinza médio) */
+    color: #666666;
 }
 
-/* --- Footer (Rodapé) --- */
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ffffff; /* Fundo branco */
-    color: #777777; /* Texto do rodapé (cinza) */
+    background-color: #ffffff; 
+    color: #777777; 
     font-size: 0.9em;
     border-top: 1px solid #dddddd;
+}
+
+
+
+/* Carrossel */
+
+ul {
+  width: 460px;
+  height: 580px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 0 0 100%;
+}
+
+ul {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+li {
+  scroll-snap-align: center;
+}
+
+/* Botões */
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+ul::scroll-button(left) {
+  content: "◄";
+}
+
+ul::scroll-button(right) {
+  content: "►";
+}
+ul {
+  anchor-name: --my-carousel;
+}
+
+ul::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+ul::scroll-button(left) {
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) - 140px);
+}
+
+ul::scroll-button(right) {
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) - 140px);
 }
