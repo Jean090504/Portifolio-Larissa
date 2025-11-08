@@ -11,40 +11,23 @@ ol, ul, li{
 
 body {
     font-family: "Bodoni Moda", serif;
-    margin: 0;
+    width: 100vw;
+    height: auto;
     padding: 0;
-    background-image: url(./img/teste.png);
-    background-size: cover;
-    backdrop-filter: blur(5px);
     position: relative;
     color: #262220;
+    display: flex;
+    flex-direction: column;
+    background-color: #30332F;
 }
 
-.container {
-    max-width: 1500px;
-    margin: 0 auto;
+.containerHeader {
     padding: 20px;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-h1, h2, h3 {
-    color: #a15c38;
-}
-
-h2 {
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-top: 30px;
-    font-size: 2.5em;
-}
-
 header {
-    background-color: #a15c38;
-    border-bottom: 1px solid #dddddd; 
+    background-color: #0d1216;
+    border-bottom: 1px solid #FFE6E6; 
     padding: 10px 0;
     text-align: center;
 }
@@ -71,171 +54,58 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #262220;
+    background-color: #C1C1BD;
     color: #ffffff; 
     border-radius: 5px;
 }
 
-#sobre-mim p {
-    line-height: 1.2;
-    font-size: 1.3em;
-    text-align: justify;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #a15c38;
-    text-decoration: none;
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-#sobre-projeto p {
-    line-height: 1.7;
-    font-size: 1.05em;
-    text-align: justify;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
-    gap: 25px; 
-}
-
-.peca {
-    background-color: #ffffff; 
-    border: 1px solid #dddddd; 
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.peca:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.peca img {
-    width: 100%;
-    height: 470px;
-    object-fit: cover;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.peca-info {
+main.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #30332F;
     padding: 20px;
+    width: 100vw;
+    height: auto;
 }
 
-.peca-info h3 {
-    margin-top: 0;
-    font-size: 1.4em;
+#larissa{
+    width: 100%;
+    height: auto;
+    margin-top: -410px;
 }
 
-.peca-info .tema {
-    font-style: italic;
-    font-size: 0.9em;
-    color: #fca311; 
-    font-weight: bold;
-    margin-bottom: 10px;
+.inicioh1{
+    font-size: 275px;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #FFE6E6;
 }
 
-.peca-info .descricao {
-    font-size: 0.95em;
-    line-height: 1.5;
-    color: #666666;
+.iniciosh2{
+    font-size: 200px;
+    max-width: 200px;
+    font-family: "Birthstone", cursive;
+    font-style: normal;
+    color: #C1C1BD;
+    display: flex;
+    justify-content: start;
+    align-self: flex-start;
+    margin-top: -110px;
+    margin-left: -180px;
 }
+
+
+
 
 footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ffffff; 
     color: #777777; 
     font-size: 0.9em;
     border-top: 1px solid #dddddd;
-}
-
-
-
-/* Carrossel */
-
-ul {
-  width: 460px;
-  height: 580px;
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-}
-
-li {
-  list-style-type: none;
-  background-color: #eeeeee;
-  border: 1px solid #dddddd;
-  padding: 20px;
-  border-radius: 8px;
-  flex: 0 0 100%;
-}
-
-ul {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
-li {
-  scroll-snap-align: center;
-}
-
-/* Botões */
-ul::scroll-button(*) {
-  border: 0;
-  font-size: 2rem;
-  background: none;
-  color: black;
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-ul::scroll-button(*):hover,
-ul::scroll-button(*):focus {
-  opacity: 1;
-}
-
-ul::scroll-button(*):active {
-  translate: 1px 1px;
-}
-
-ul::scroll-button(*):disabled {
-  opacity: 0.2;
-  cursor: unset;
-}
-ul::scroll-button(left) {
-  content: "◄";
-}
-
-ul::scroll-button(right) {
-  content: "►";
-}
-ul {
-  anchor-name: --my-carousel;
-}
-
-ul::scroll-button(*) {
-  position: absolute;
-  position-anchor: --my-carousel;
-}
-
-ul::scroll-button(left) {
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) - 140px);
-}
-
-ul::scroll-button(right) {
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) - 140px);
 }
